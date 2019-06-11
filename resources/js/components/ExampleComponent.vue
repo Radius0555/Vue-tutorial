@@ -1,13 +1,7 @@
-<style>
-.enabled{
-	color: blue;
-}
-</style>
 <template>
 <div id="app">
-<p class="static-class" :class="[isEnabled ? 'enabled' : null, someClass, dynamicClasses, {highlighted: isHighlighted}]">
-Element, który ma je wszystkie!
-</p>
+<input type="number" v-model="number">
+<p>Metoda: {{ fullName() }}</p>
 </div>
 </template>
 
@@ -15,14 +9,16 @@ Element, który ma je wszystkie!
 export default {
 			data() {
 				return {
-					someClass: 'some-weird-class',
-					dynamicClasses: {
-						first: true,
-						second:false
-					},
-					isEnabled: true,
-					isHighlighted: false,
+					firstName: "Radosław",
+					lastName: "Foltyński",
+					number: "7"
 			};
+		},
+		methods: {
+			fullName(){
+				alert("Metoda załadowana!");
+				return this.firstName + " " + this.lastName;
+			}
 		}
 	}	
 </script>
