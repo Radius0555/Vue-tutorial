@@ -1,7 +1,8 @@
 <template>
 <div id="app">
-<input v-model="liczba" />
-<h1>{{ name + liczba*2 }}</h1>
+<a v-bind:href="togithub">{{ text }}</a>
+<br>
+<input v-model="togithub" />
 </div>
 </template>
 
@@ -9,8 +10,8 @@
 export default {
 	data(){
 		return {
-			name: "Hello Mariolka ;) ",
-			liczba: 2,
+			text: "Do mojego githuba",
+			togithub: "https://github.com/Radius0555/Vue-tutorial"
 		}
 	}
 }	
