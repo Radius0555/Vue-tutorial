@@ -1708,13 +1708,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      Mys: {
-        "first name": "Radosław",
-        "last name": "Foltyński",
-        "age": "28 lat"
+      Table: {
+        Fruits: ["Jabłko", "Gruszka"],
+        Drinkables: ["Woda", "Kawa"]
       }
     };
   }
@@ -37014,16 +37017,19 @@ var render = function() {
   return _c("div", { attrs: { id: "app" } }, [
     _c(
       "ul",
-      [
-        _c("h2", [_vm._v("Moje dane:")]),
-        _vm._v(" "),
-        _vm._l(_vm.Mys, function(quality, My, index) {
-          return _c("li", [
-            _vm._v("\n" + _vm._s(My) + " => " + _vm._s(quality) + "\n")
-          ])
-        })
-      ],
-      2
+      _vm._l(_vm.Table, function(quality, table) {
+        return _c("li", [
+          _vm._v("\n" + _vm._s(table) + "\n"),
+          _c(
+            "ul",
+            _vm._l(quality, function(dawaj, table) {
+              return _c("li", [_vm._v("\n\t\t" + _vm._s(dawaj) + "\n\t")])
+            }),
+            0
+          )
+        ])
+      }),
+      0
     )
   ])
 }

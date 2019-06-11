@@ -1,9 +1,13 @@
 <template>
 <div id="app">
 <ul>
-<h2>Moje dane:</h2>
-<li v-for="(quality, My, index) in Mys">
-{{ My }} => {{ quality }}
+<li v-for="(quality, table) in Table">
+{{ table }}
+<ul>
+	<li v-for="(dawaj, table) in quality">
+		{{ dawaj }}
+	</li>
+</ul>
 </li>
 </ul>
 </div>
@@ -13,10 +17,9 @@
 export default {
   data() {
     return {
-		Mys: {
-			"first name": "Radosław",
-			"last name": "Foltyński",
-			"age": "28 lat"
+		Table: {
+		Fruits: ["Jabłko", "Gruszka"],
+		Drinkables: ["Woda", "Kawa"],
 		}
 	};
   }
