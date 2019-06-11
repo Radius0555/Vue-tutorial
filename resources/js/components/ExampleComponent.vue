@@ -1,20 +1,17 @@
 <template>
 <div id="app">
-<a v-bind="linkGit">{{ text }}</a>
-<br>
+	<input v-model="text"/>
+	<p v-if="text === ''">Wpisz coś</p>
+	<p v-else>{{ text }}</p>
 </div>
 </template>
 
 <script>
 export default {
-	data(){
-		return {
-			text: "Do mojego githuba",
-			linkGit: {
-				href: "https://github.com/Radius0555/Vue-tutorial",
-				title: "Kliknij!"
-			}
-		}
-	}
+  data() {
+    return {
+      text: "",
+    };
+  }
 }	
 </script>
