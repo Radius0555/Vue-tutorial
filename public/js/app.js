@@ -1710,11 +1710,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      isEnabled: true
+      someClass: 'some-weird-class',
+      dynamicClasses: {
+        first: true,
+        second: false
+      },
+      isEnabled: true,
+      isHighlighted: false
     };
   }
 });
@@ -37656,44 +37661,19 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { attrs: { id: "app" } }, [
-    _c("label", { class: { enabled: _vm.isEnabled } }, [
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.isEnabled,
-            expression: "isEnabled"
-          }
-        ],
-        attrs: { type: "checkbox" },
-        domProps: {
-          checked: Array.isArray(_vm.isEnabled)
-            ? _vm._i(_vm.isEnabled, null) > -1
-            : _vm.isEnabled
-        },
-        on: {
-          change: function($event) {
-            var $$a = _vm.isEnabled,
-              $$el = $event.target,
-              $$c = $$el.checked ? true : false
-            if (Array.isArray($$a)) {
-              var $$v = null,
-                $$i = _vm._i($$a, $$v)
-              if ($$el.checked) {
-                $$i < 0 && (_vm.isEnabled = $$a.concat([$$v]))
-              } else {
-                $$i > -1 &&
-                  (_vm.isEnabled = $$a.slice(0, $$i).concat($$a.slice($$i + 1)))
-              }
-            } else {
-              _vm.isEnabled = $$c
-            }
-          }
-        }
-      }),
-      _vm._v("\nKliknij aby zmienić kolor!\n")
-    ])
+    _c(
+      "p",
+      {
+        staticClass: "static-class",
+        class: [
+          _vm.isEnabled ? "enabled" : null,
+          _vm.someClass,
+          _vm.dynamicClasses,
+          { highlighted: _vm.isHighlighted }
+        ]
+      },
+      [_vm._v("\nElement, który ma je wszystkie!\n")]
+    )
   ])
 }
 var staticRenderFns = []

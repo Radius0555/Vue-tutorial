@@ -5,10 +5,9 @@
 </style>
 <template>
 <div id="app">
-<label :class="{ enabled: isEnabled }">
-<input type="checkbox" v-model="isEnabled" />
-Kliknij aby zmienić kolor!
-</label>
+<p class="static-class" :class="[isEnabled ? 'enabled' : null, someClass, dynamicClasses, {highlighted: isHighlighted}]">
+Element, który ma je wszystkie!
+</p>
 </div>
 </template>
 
@@ -16,7 +15,13 @@ Kliknij aby zmienić kolor!
 export default {
 			data() {
 				return {
-					isEnabled: true
+					someClass: 'some-weird-class',
+					dynamicClasses: {
+						first: true,
+						second:false
+					},
+					isEnabled: true,
+					isHighlighted: false,
 			};
 		}
 	}	
