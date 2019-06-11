@@ -2,8 +2,8 @@
 <div id="app">
 <ul>
 <h2>Pieski:</h2>
-<li v-for="dog in dogs">
-{{ dog }}
+<li v-for="(dog, index) in dogs">
+{{ index }} {{ prefix }} {{ dog }}
 </li>
 </ul>
 </div>
@@ -13,7 +13,8 @@
 export default {
   data() {
     return {
-	  dogs: ["Azorek", "Kira", "Neruś"]
+		prefix: " => ",
+		dogs: ["Azorek", "Kira", "Neruś"]
     };
   }
 }	

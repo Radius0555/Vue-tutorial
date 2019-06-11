@@ -1711,6 +1711,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      prefix: " => ",
       dogs: ["Azorek", "Kira", "Neruś"]
     };
   }
@@ -37013,8 +37014,18 @@ var render = function() {
       [
         _c("h2", [_vm._v("Pieski:")]),
         _vm._v(" "),
-        _vm._l(_vm.dogs, function(dog) {
-          return _c("li", [_vm._v("\n" + _vm._s(dog) + "\n")])
+        _vm._l(_vm.dogs, function(dog, index) {
+          return _c("li", [
+            _vm._v(
+              "\n" +
+                _vm._s(index) +
+                " " +
+                _vm._s(_vm.prefix) +
+                " " +
+                _vm._s(dog) +
+                "\n"
+            )
+          ])
         })
       ],
       2
