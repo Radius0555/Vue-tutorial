@@ -1,6 +1,7 @@
 <template>
 <div id="app">
-<h1>{{ appTitle }}</h1>
+<input v-model="name" />
+<h1>{{ name }}</h1>
 </div>
 </template>
 
@@ -8,7 +9,7 @@
 export default {
 	data(){
 		return {
-			appTitle: "Pierwsza aplikacja Vue"
+			name: "Hello Mariolka ;)"
 		}
 	}
 }	
