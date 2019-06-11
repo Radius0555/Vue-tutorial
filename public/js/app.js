@@ -1705,10 +1705,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      text: ""
+      dogs: ["Azorek", "Kira", "Neruś"]
     };
   }
 });
@@ -37005,54 +37008,16 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { attrs: { id: "app" } }, [
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.text,
-          expression: "text"
-        }
+    _c(
+      "ul",
+      [
+        _c("h2", [_vm._v("Pieski:")]),
+        _vm._v(" "),
+        _vm._l(_vm.dogs, function(dog) {
+          return _c("li", [_vm._v("\n" + _vm._s(dog) + "\n")])
+        })
       ],
-      domProps: { value: _vm.text },
-      on: {
-        input: function($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.text = $event.target.value
-        }
-      }
-    }),
-    _vm._v(" "),
-    _c(
-      "p",
-      {
-        directives: [
-          {
-            name: "show",
-            rawName: "v-show",
-            value: _vm.text === "",
-            expression: "text === ''"
-          }
-        ]
-      },
-      [_vm._v("Wpisz coś")]
-    ),
-    _vm._v(" "),
-    _c(
-      "p",
-      {
-        directives: [
-          {
-            name: "show",
-            rawName: "v-show",
-            value: _vm.text !== "",
-            expression: "text !== ''"
-          }
-        ]
-      },
-      [_vm._v("Dzięki!"), _c("br"), _vm._v(_vm._s(_vm.text))]
+      2
     )
   ])
 }

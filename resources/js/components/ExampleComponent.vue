@@ -1,8 +1,11 @@
 <template>
 <div id="app">
-	<input v-model="text"/>
-	<p v-show="text === ''">Wpisz coś</p>
-	<p v-show="text !== ''">Dzięki!</br>{{ text }}</p>
+<ul>
+<h2>Pieski:</h2>
+<li v-for="dog in dogs">
+{{ dog }}
+</li>
+</ul>
 </div>
 </template>
 
@@ -10,7 +13,7 @@
 export default {
   data() {
     return {
-      text: "",
+	  dogs: ["Azorek", "Kira", "Neruś"]
     };
   }
 }	
