@@ -1707,7 +1707,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      name: "Hello Mariolka ;)"
+      name: "Hello Mariolka ;) ",
+      liczba: 2
     };
   }
 });
@@ -37009,22 +37010,22 @@ var render = function() {
         {
           name: "model",
           rawName: "v-model",
-          value: _vm.name,
-          expression: "name"
+          value: _vm.liczba,
+          expression: "liczba"
         }
       ],
-      domProps: { value: _vm.name },
+      domProps: { value: _vm.liczba },
       on: {
         input: function($event) {
           if ($event.target.composing) {
             return
           }
-          _vm.name = $event.target.value
+          _vm.liczba = $event.target.value
         }
       }
     }),
     _vm._v(" "),
-    _c("h1", [_vm._v(_vm._s(_vm.name))])
+    _c("h1", [_vm._v(_vm._s(_vm.name + _vm.liczba * 2))])
   ])
 }
 var staticRenderFns = []

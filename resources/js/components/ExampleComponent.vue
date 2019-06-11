@@ -1,7 +1,7 @@
 <template>
 <div id="app">
-<input v-model="name" />
-<h1>{{ name }}</h1>
+<input v-model="liczba" />
+<h1>{{ name + liczba*2 }}</h1>
 </div>
 </template>
 
@@ -9,7 +9,8 @@
 export default {
 	data(){
 		return {
-			name: "Hello Mariolka ;)"
+			name: "Hello Mariolka ;) ",
+			liczba: 2,
 		}
 	}
 }	
