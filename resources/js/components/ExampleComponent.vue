@@ -1,7 +1,8 @@
 <template>
 <div id="app">
-<input type="number" v-model="number">
-<p>Metoda: {{ fullName() }}</p>
+Licznik: {{ counter }}
+<button v-on:click="increment">+</button>
+<button @click="decrement">-</button>
 </div>
 </template>
 
@@ -9,15 +10,15 @@
 export default {
 			data() {
 				return {
-					firstName: "Radosław",
-					lastName: "Foltyński",
-					number: "7"
+					counter: 0
 			};
 		},
 		methods: {
-			fullName(){
-				alert("Metoda załadowana!");
-				return this.firstName + " " + this.lastName;
+			increment(){
+				this.counter = this.counter + 1;
+			},
+			decrement(){
+				this.counter = this.counter -1;
 			}
 		}
 	}	

@@ -1704,18 +1704,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      firstName: "Radosław",
-      lastName: "Foltyński",
-      number: "7"
+      counter: 0
     };
   },
   methods: {
-    fullName: function fullName() {
-      alert("Metoda załadowana!");
-      return this.firstName + " " + this.lastName;
+    increment: function increment() {
+      this.counter = this.counter + 1;
+    },
+    decrement: function decrement() {
+      this.counter = this.counter - 1;
     }
   }
 });
@@ -37012,28 +37013,10 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { attrs: { id: "app" } }, [
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.number,
-          expression: "number"
-        }
-      ],
-      attrs: { type: "number" },
-      domProps: { value: _vm.number },
-      on: {
-        input: function($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.number = $event.target.value
-        }
-      }
-    }),
+    _vm._v("\nLicznik: " + _vm._s(_vm.counter) + "\n"),
+    _c("button", { on: { click: _vm.increment } }, [_vm._v("+")]),
     _vm._v(" "),
-    _c("p", [_vm._v("Metoda: " + _vm._s(_vm.fullName()))])
+    _c("button", { on: { click: _vm.decrement } }, [_vm._v("-")])
   ])
 }
 var staticRenderFns = []
