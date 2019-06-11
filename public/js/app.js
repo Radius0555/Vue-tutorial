@@ -1704,17 +1704,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      checkedNames: []
-    };
+  methods: {
+    say: function say(msg) {
+      alert(msg);
+    }
   }
 });
 
@@ -37010,129 +37004,29 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { attrs: { id: "app" } }, [
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.checkedNames,
-          expression: "checkedNames"
-        }
-      ],
-      attrs: { type: "checkbox", id: "john", value: "John" },
-      domProps: {
-        checked: Array.isArray(_vm.checkedNames)
-          ? _vm._i(_vm.checkedNames, "John") > -1
-          : _vm.checkedNames
-      },
-      on: {
-        change: function($event) {
-          var $$a = _vm.checkedNames,
-            $$el = $event.target,
-            $$c = $$el.checked ? true : false
-          if (Array.isArray($$a)) {
-            var $$v = "John",
-              $$i = _vm._i($$a, $$v)
-            if ($$el.checked) {
-              $$i < 0 && (_vm.checkedNames = $$a.concat([$$v]))
-            } else {
-              $$i > -1 &&
-                (_vm.checkedNames = $$a
-                  .slice(0, $$i)
-                  .concat($$a.slice($$i + 1)))
-            }
-          } else {
-            _vm.checkedNames = $$c
+    _c(
+      "button",
+      {
+        on: {
+          click: function($event) {
+            return _vm.say("Hello Mariolka !")
           }
         }
-      }
-    }),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "jack" } }, [_vm._v("John")]),
-    _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.checkedNames,
-          expression: "checkedNames"
-        }
-      ],
-      attrs: { type: "checkbox", id: "jack", value: "Jack" },
-      domProps: {
-        checked: Array.isArray(_vm.checkedNames)
-          ? _vm._i(_vm.checkedNames, "Jack") > -1
-          : _vm.checkedNames
       },
-      on: {
-        change: function($event) {
-          var $$a = _vm.checkedNames,
-            $$el = $event.target,
-            $$c = $$el.checked ? true : false
-          if (Array.isArray($$a)) {
-            var $$v = "Jack",
-              $$i = _vm._i($$a, $$v)
-            if ($$el.checked) {
-              $$i < 0 && (_vm.checkedNames = $$a.concat([$$v]))
-            } else {
-              $$i > -1 &&
-                (_vm.checkedNames = $$a
-                  .slice(0, $$i)
-                  .concat($$a.slice($$i + 1)))
-            }
-          } else {
-            _vm.checkedNames = $$c
+      [_vm._v(" Powiedz hello mariolce :)")]
+    ),
+    _vm._v(" "),
+    _c(
+      "button",
+      {
+        on: {
+          click: function($event) {
+            return _vm.say("Papa Mariolka !")
           }
         }
-      }
-    }),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "jack" } }, [_vm._v("Jack")]),
-    _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.checkedNames,
-          expression: "checkedNames"
-        }
-      ],
-      attrs: { type: "checkbox", id: "mike", value: "Mike" },
-      domProps: {
-        checked: Array.isArray(_vm.checkedNames)
-          ? _vm._i(_vm.checkedNames, "Mike") > -1
-          : _vm.checkedNames
       },
-      on: {
-        change: function($event) {
-          var $$a = _vm.checkedNames,
-            $$el = $event.target,
-            $$c = $$el.checked ? true : false
-          if (Array.isArray($$a)) {
-            var $$v = "Mike",
-              $$i = _vm._i($$a, $$v)
-            if ($$el.checked) {
-              $$i < 0 && (_vm.checkedNames = $$a.concat([$$v]))
-            } else {
-              $$i > -1 &&
-                (_vm.checkedNames = $$a
-                  .slice(0, $$i)
-                  .concat($$a.slice($$i + 1)))
-            }
-          } else {
-            _vm.checkedNames = $$c
-          }
-        }
-      }
-    }),
-    _vm._v(" "),
-    _c("label", { attrs: { for: "jack" } }, [_vm._v("Mike")]),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("span", [_vm._v("Checked names: " + _vm._s(_vm.checkedNames))])
+      [_vm._v(" Powiedz papa Mariolce :)")]
+    )
   ])
 }
 var staticRenderFns = []

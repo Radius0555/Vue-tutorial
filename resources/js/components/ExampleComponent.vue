@@ -1,22 +1,18 @@
 <template>
 <div id="app">
-<input type="checkbox" id="john" value="John" v-model="checkedNames">
-<label for="jack">John</label>
-<input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
-<label for="jack">Jack</label>
-<input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
-<label for="jack">Mike</label>
-<br>
-<span>Checked names: {{ checkedNames }}</span>
+<button @click="say('Hello Mariolka !')"> Powiedz hello mariolce :)</button>
+<button @click="say('Papa Mariolka !')"> Powiedz papa Mariolce :)</button>
 </div>
 </template>
 
 <script>
 export default {
-			data(){
-				return{
-					checkedNames: []
-			}
+	methods: {
+		say: function(msg) {
+			alert(msg)
 		}
-	}	
+	}
+}
 </script>
+
+
