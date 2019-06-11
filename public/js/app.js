@@ -37025,9 +37025,35 @@ var render = function() {
       }
     }),
     _vm._v(" "),
-    _vm.text === ""
-      ? _c("p", [_vm._v("Wpisz coś")])
-      : _c("p", [_vm._v(_vm._s(_vm.text))])
+    _c(
+      "p",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.text === "",
+            expression: "text === ''"
+          }
+        ]
+      },
+      [_vm._v("Wpisz coś")]
+    ),
+    _vm._v(" "),
+    _c(
+      "p",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.text !== "",
+            expression: "text !== ''"
+          }
+        ]
+      },
+      [_vm._v("Dzięki!"), _c("br"), _vm._v(_vm._s(_vm.text))]
+    )
   ])
 }
 var staticRenderFns = []

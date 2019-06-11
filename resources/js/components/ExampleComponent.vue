@@ -1,8 +1,8 @@
 <template>
 <div id="app">
 	<input v-model="text"/>
-	<p v-if="text === ''">Wpisz coś</p>
-	<p v-else>{{ text }}</p>
+	<p v-show="text === ''">Wpisz coś</p>
+	<p v-show="text !== ''">Dzięki!</br>{{ text }}</p>
 </div>
 </template>
 
