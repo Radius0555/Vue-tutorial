@@ -1,8 +1,7 @@
 <template>
 <div id="app">
-<a v-bind:href="togithub">{{ text }}</a>
+<a v-bind="linkGit">{{ text }}</a>
 <br>
-<input v-model="togithub" />
 </div>
 </template>
 
@@ -11,7 +10,10 @@ export default {
 	data(){
 		return {
 			text: "Do mojego githuba",
-			togithub: "https://github.com/Radius0555/Vue-tutorial"
+			linkGit: {
+				href: "https://github.com/Radius0555/Vue-tutorial",
+				title: "Kliknij!"
+			}
 		}
 	}
 }	

@@ -1704,12 +1704,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       text: "Do mojego githuba",
-      togithub: "https://github.com/Radius0555/Vue-tutorial"
+      linkGit: {
+        href: "https://github.com/Radius0555/Vue-tutorial",
+        title: "Kliknij!"
+      }
     };
   }
 });
@@ -37006,29 +37008,9 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { attrs: { id: "app" } }, [
-    _c("a", { attrs: { href: _vm.togithub } }, [_vm._v(_vm._s(_vm.text))]),
+    _c("a", _vm._b({}, "a", _vm.linkGit, false), [_vm._v(_vm._s(_vm.text))]),
     _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.togithub,
-          expression: "togithub"
-        }
-      ],
-      domProps: { value: _vm.togithub },
-      on: {
-        input: function($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.togithub = $event.target.value
-        }
-      }
-    })
+    _c("br")
   ])
 }
 var staticRenderFns = []
