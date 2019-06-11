@@ -1,27 +1,23 @@
+<style>
+.enabled{
+	color: blue;
+}
+</style>
 <template>
 <div id="app">
-<ul>
-<li v-for="(quality, table) in Table">
-{{ table }}
-<ul>
-	<li v-for="(dawaj, table) in quality">
-		{{ dawaj }}
-	</li>
-</ul>
-</li>
-</ul>
+<label :class="{ enabled: isEnabled }">
+<input type="checkbox" v-model="isEnabled" />
+Kliknij aby zmienić kolor!
+</label>
 </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-		Table: {
-		Fruits: ["Jabłko", "Gruszka"],
-		Drinkables: ["Woda", "Kawa"],
+			data() {
+				return {
+					isEnabled: true
+			};
 		}
-	};
-  }
-}	
+	}	
 </script>
